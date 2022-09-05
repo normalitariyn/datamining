@@ -1,0 +1,1138 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Statistik Deskri &#8212; My sample book</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Notebooks with MyST Markdown" href="markdown-notebooks.html" />
+    <link rel="prev" title="Markdown Files" href="markdown.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">My sample book</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="markdown.html">
+   Markdown Files
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Statistik Deskri
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="markdown-notebooks.html">
+   Notebooks with MyST Markdown
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/notebooks.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fnotebooks.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/notebooks.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#membaca-data-dari-url">
+   <strong>
+    1. Membaca Data Dari URL
+   </strong>
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Statistik Deskri</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#membaca-data-dari-url">
+   <strong>
+    1. Membaca Data Dari URL
+   </strong>
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="statistik-deskri">
+<h1>Statistik Deskri<a class="headerlink" href="#statistik-deskri" title="Permalink to this headline">#</a></h1>
+<section id="membaca-data-dari-url">
+<h2><strong>1. Membaca Data Dari URL</strong><a class="headerlink" href="#membaca-data-dari-url" title="Permalink to this headline">#</a></h2>
+<p><em>mengimport url</em></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="c1">#c = pd.read_csv(&#39;https://raw.githubusercontent.com/normalitariyn/mydataset/main/volcano-events0-21.csv&#39;)</span>
+<span class="n">url</span> <span class="o">=</span><span class="s1">&#39;https://raw.githubusercontent.com/normalitariyn/mydataset/main/Monkey_Pox_Cases_Worldwide.csv&#39;</span> 
+<span class="n">c</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><em>menampilkan dataset</em></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">c</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-49b28874-10fe-44a1-a476-e24d6e72fa80">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Country</th>
+      <th>Confirmed_Cases</th>
+      <th>Suspected_Cases</th>
+      <th>Hospitalized</th>
+      <th>Travel_History_Yes</th>
+      <th>Travel_History_No</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>England</td>
+      <td>3257.0</td>
+      <td>0.0</td>
+      <td>5.0</td>
+      <td>2.0</td>
+      <td>7.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Portugal</td>
+      <td>846.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>34.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Spain</td>
+      <td>6543.0</td>
+      <td>0.0</td>
+      <td>13.0</td>
+      <td>2.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>United States</td>
+      <td>18879.0</td>
+      <td>0.0</td>
+      <td>4.0</td>
+      <td>41.0</td>
+      <td>11.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Canada</td>
+      <td>1228.0</td>
+      <td>9.0</td>
+      <td>1.0</td>
+      <td>5.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>116</th>
+      <td>Central African Republic</td>
+      <td>8.0</td>
+      <td>9.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>117</th>
+      <td>Republic of Congo</td>
+      <td>3.0</td>
+      <td>5.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>118</th>
+      <td>Cameroon</td>
+      <td>7.0</td>
+      <td>27.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>119</th>
+      <td>Liberia</td>
+      <td>2.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>120</th>
+      <td>Sierra Leone</td>
+      <td>0.0</td>
+      <td>2.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>121 rows × 6 columns</p>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-49b28874-10fe-44a1-a476-e24d6e72fa80')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-49b28874-10fe-44a1-a476-e24d6e72fa80 button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-49b28874-10fe-44a1-a476-e24d6e72fa80');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+</div></div>
+</div>
+<p><strong>2. Membuat Statistik Diskriptif dari Data</strong></p>
+<ul class="simple">
+<li><p>menggunakan fungsi describe</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">c</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-481339f9-693b-43f4-8c28-3164b9862d01">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Confirmed_Cases</th>
+      <th>Suspected_Cases</th>
+      <th>Hospitalized</th>
+      <th>Travel_History_Yes</th>
+      <th>Travel_History_No</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>121.000000</td>
+      <td>121.000000</td>
+      <td>121.000000</td>
+      <td>121.000000</td>
+      <td>121.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>427.892562</td>
+      <td>21.396694</td>
+      <td>1.181818</td>
+      <td>2.173554</td>
+      <td>0.727273</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>1927.455152</td>
+      <td>203.127156</td>
+      <td>2.860653</td>
+      <td>4.893325</td>
+      <td>3.612478</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>2.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>6.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>1.000000</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>70.000000</td>
+      <td>0.000000</td>
+      <td>1.000000</td>
+      <td>3.000000</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>18879.000000</td>
+      <td>2217.000000</td>
+      <td>18.000000</td>
+      <td>41.000000</td>
+      <td>34.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-481339f9-693b-43f4-8c28-3164b9862d01')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-481339f9-693b-43f4-8c28-3164b9862d01 button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-481339f9-693b-43f4-8c28-3164b9862d01');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
+<span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/content/drive&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">KeyboardInterrupt</span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">4</span><span class="o">-</span><span class="n">d5df0069828e</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/content/drive&#39;</span><span class="p">)</span>
+
+<span class="nn">/usr/local/lib/python3.7/dist-packages/google/colab/drive.py</span> in <span class="ni">mount</span><span class="nt">(mountpoint, force_remount, timeout_ms)</span>
+<span class="g g-Whitespace">    </span><span class="mi">103</span>       <span class="n">force_remount</span><span class="o">=</span><span class="n">force_remount</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">104</span>       <span class="n">timeout_ms</span><span class="o">=</span><span class="n">timeout_ms</span><span class="p">,</span>
+<span class="ne">--&gt; </span><span class="mi">105</span>       <span class="n">ephemeral</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">106</span> 
+<span class="g g-Whitespace">    </span><span class="mi">107</span> 
+
+<span class="nn">/usr/local/lib/python3.7/dist-packages/google/colab/drive.py</span> in <span class="ni">_mount</span><span class="nt">(mountpoint, force_remount, timeout_ms, ephemeral)</span>
+<span class="g g-Whitespace">    </span><span class="mi">118</span>   <span class="k">if</span> <span class="n">ephemeral</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">119</span>     <span class="n">_message</span><span class="o">.</span><span class="n">blocking_request</span><span class="p">(</span>
+<span class="ne">--&gt; </span><span class="mi">120</span>         <span class="s1">&#39;request_auth&#39;</span><span class="p">,</span> <span class="n">request</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;authType&#39;</span><span class="p">:</span> <span class="s1">&#39;dfs_ephemeral&#39;</span><span class="p">},</span> <span class="n">timeout_sec</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">121</span> 
+<span class="g g-Whitespace">    </span><span class="mi">122</span>   <span class="n">mountpoint</span> <span class="o">=</span> <span class="n">_os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="n">mountpoint</span><span class="p">)</span>
+
+<span class="nn">/usr/local/lib/python3.7/dist-packages/google/colab/_message.py</span> in <span class="ni">blocking_request</span><span class="nt">(request_type, request, timeout_sec, parent)</span>
+<span class="g g-Whitespace">    </span><span class="mi">169</span>   <span class="n">request_id</span> <span class="o">=</span> <span class="n">send_request</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">170</span>       <span class="n">request_type</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">parent</span><span class="p">,</span> <span class="n">expect_reply</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">171</span>   <span class="k">return</span> <span class="n">read_reply_from_input</span><span class="p">(</span><span class="n">request_id</span><span class="p">,</span> <span class="n">timeout_sec</span><span class="p">)</span>
+
+<span class="nn">/usr/local/lib/python3.7/dist-packages/google/colab/_message.py</span> in <span class="ni">read_reply_from_input</span><span class="nt">(message_id, timeout_sec)</span>
+<span class="g g-Whitespace">     </span><span class="mi">95</span>     <span class="n">reply</span> <span class="o">=</span> <span class="n">_read_next_input_message</span><span class="p">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">96</span>     <span class="k">if</span> <span class="n">reply</span> <span class="o">==</span> <span class="n">_NOT_READY</span> <span class="ow">or</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">reply</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+<span class="ne">---&gt; </span><span class="mi">97</span>       <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.025</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">98</span>       <span class="k">continue</span>
+<span class="g g-Whitespace">     </span><span class="mi">99</span>     <span class="k">if</span> <span class="p">(</span><span class="n">reply</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;type&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;colab_reply&#39;</span> <span class="ow">and</span>
+
+<span class="ne">KeyboardInterrupt</span>: 
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>menggunakan mean, median, modus</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># import library</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># menentukan dataframe</span>
+<span class="n">Confirmed_Cases</span> <span class="o">=</span> <span class="n">c</span><span class="p">[</span><span class="s1">&#39;Confirmed_Cases&#39;</span><span class="p">]</span>
+<span class="n">Suspected_Cases</span> <span class="o">=</span> <span class="n">c</span><span class="p">[</span><span class="s1">&#39;Suspected_Cases&#39;</span><span class="p">]</span>
+<span class="n">Hospitalized</span> <span class="o">=</span> <span class="n">c</span><span class="p">[</span><span class="s2">&quot;Hospitalized&quot;</span><span class="p">]</span>
+<span class="n">Travel_History_Yes</span> <span class="o">=</span> <span class="n">c</span><span class="p">[</span><span class="s2">&quot;Travel_History_Yes&quot;</span><span class="p">]</span>
+<span class="n">Travel_History_No</span> <span class="o">=</span> <span class="n">c</span><span class="p">[</span><span class="s2">&quot;Travel_History_No&quot;</span><span class="p">]</span>
+
+
+<span class="c1"># mencari mean, median dan modus</span>
+
+<span class="n">meanCC</span> <span class="o">=</span> <span class="n">Confirmed_Cases</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">medianCC</span> <span class="o">=</span> <span class="n">Confirmed_Cases</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
+<span class="n">modusCC</span> <span class="o">=</span> <span class="n">Confirmed_Cases</span><span class="o">.</span><span class="n">mode</span><span class="p">()</span>
+
+<span class="n">meanSC</span> <span class="o">=</span> <span class="n">Suspected_Cases</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">medianSC</span> <span class="o">=</span> <span class="n">Suspected_Cases</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
+<span class="n">modusSC</span> <span class="o">=</span> <span class="n">Suspected_Cases</span><span class="o">.</span><span class="n">mode</span><span class="p">()</span>
+
+<span class="n">meanH</span> <span class="o">=</span> <span class="n">Hospitalized</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">medianH</span> <span class="o">=</span> <span class="n">Hospitalized</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
+<span class="n">modusH</span> <span class="o">=</span> <span class="n">Hospitalized</span><span class="o">.</span><span class="n">mode</span><span class="p">()</span>
+
+<span class="n">meanTHY</span> <span class="o">=</span> <span class="n">Travel_History_Yes</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">medianTHY</span> <span class="o">=</span> <span class="n">Travel_History_Yes</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
+<span class="n">modusTHY</span> <span class="o">=</span> <span class="n">Travel_History_Yes</span><span class="o">.</span><span class="n">mode</span><span class="p">()</span>
+
+<span class="n">meanTHN</span> <span class="o">=</span> <span class="n">Travel_History_No</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">medianTHN</span> <span class="o">=</span> <span class="n">Travel_History_No</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
+<span class="n">modusTHN</span> <span class="o">=</span> <span class="n">Travel_History_No</span><span class="o">.</span><span class="n">mode</span><span class="p">()</span>
+
+<span class="c1"># menampilkan ukuran nilai tengah</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Confirmed Case --&gt;&quot;</span><span class="p">,</span><span class="s1">&#39;Mean: &#39;</span><span class="p">,</span><span class="n">meanCC</span><span class="p">,</span><span class="s1">&#39;Median: &#39;</span><span class="p">,</span><span class="n">medianCC</span><span class="p">,</span><span class="s1">&#39;Modus: &#39;</span><span class="p">,</span><span class="n">modusCC</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Susspected Case --&gt;&quot;</span><span class="p">,</span><span class="s1">&#39;Mean: &#39;</span><span class="p">,</span><span class="n">meanSC</span><span class="p">,</span><span class="s1">&#39;Median: &#39;</span><span class="p">,</span><span class="n">medianSC</span><span class="p">,</span><span class="s1">&#39;Modus: &#39;</span><span class="p">,</span><span class="n">modusSC</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hospitalized --&gt;&quot;</span><span class="p">,</span><span class="s1">&#39;Mean: &#39;</span><span class="p">,</span><span class="n">meanH</span><span class="p">,</span><span class="s1">&#39;Median: &#39;</span><span class="p">,</span><span class="n">medianH</span><span class="p">,</span><span class="s1">&#39;Modus: &#39;</span><span class="p">,</span><span class="n">modusH</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Travel History Yes --&gt;&quot;</span><span class="p">,</span><span class="s1">&#39;Mean: &#39;</span><span class="p">,</span><span class="n">meanTHY</span><span class="p">,</span><span class="s1">&#39;Median: &#39;</span><span class="p">,</span><span class="n">medianTHY</span><span class="p">,</span><span class="s1">&#39;Modus: &#39;</span><span class="p">,</span><span class="n">modusTHY</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Travel History No --&gt;&quot;</span><span class="p">,</span><span class="s1">&#39;Mean: &#39;</span><span class="p">,</span><span class="n">meanTHY</span><span class="p">,</span><span class="s1">&#39;Median: &#39;</span><span class="p">,</span><span class="n">medianTHY</span><span class="p">,</span><span class="s1">&#39;Modus: &#39;</span><span class="p">,</span><span class="n">modusTHY</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+
+<span class="c1">#mmebuat tabel</span>
+<span class="kn">from</span> <span class="nn">prettytable</span> <span class="kn">import</span> <span class="n">PrettyTable</span>
+<span class="n">tabel</span> <span class="o">=</span> <span class="n">PrettyTable</span><span class="p">([</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;Confirmed Case&quot;</span><span class="p">,</span> <span class="s2">&quot;Suspected Case&quot;</span><span class="p">,</span> <span class="s2">&quot;Hospitalized&quot;</span><span class="p">,</span> <span class="s2">&quot;Travel History Yes&quot;</span><span class="p">,</span> <span class="s2">&quot;Travel History No&quot;</span><span class="p">])</span>
+<span class="n">tabel</span><span class="o">.</span><span class="n">add_row</span><span class="p">([</span><span class="s2">&quot;Mean&quot;</span><span class="p">,</span> <span class="n">meanCC</span><span class="p">,</span> <span class="n">meanSC</span><span class="p">,</span> <span class="n">meanH</span><span class="p">,</span> <span class="n">meanTHY</span><span class="p">,</span> <span class="n">meanTHN</span><span class="p">])</span>
+<span class="n">tabel</span><span class="o">.</span><span class="n">add_row</span><span class="p">([</span><span class="s2">&quot;Median&quot;</span><span class="p">,</span> <span class="n">medianCC</span><span class="p">,</span> <span class="n">medianSC</span><span class="p">,</span> <span class="n">medianH</span><span class="p">,</span> <span class="n">medianTHY</span><span class="p">,</span> <span class="n">medianTHN</span><span class="p">])</span>
+<span class="n">tabel</span><span class="o">.</span><span class="n">add_row</span><span class="p">([</span><span class="s2">&quot;Modus&quot;</span><span class="p">,</span> <span class="n">modusCC</span><span class="p">,</span> <span class="n">modusSC</span><span class="p">,</span> <span class="n">modusH</span><span class="p">,</span> <span class="n">modusTHY</span><span class="p">,</span> <span class="n">modusTHN</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tabel</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Confirmed Case --&gt; Mean:  427.89256198347107 Median:  6.0 Modus:  0.0
+Susspected Case --&gt; Mean:  21.39669421487603 Median:  0.0 Modus:  0.0
+Hospitalized --&gt; Mean:  1.1818181818181819 Median:  0.0 Modus:  0.0
+Travel History Yes --&gt; Mean:  2.1735537190082646 Median:  1.0 Modus:  0.0
+Travel History No --&gt; Mean:  2.1735537190082646 Median:  1.0 Modus:  0.0
++--------+--------------------+-------------------+--------------------+--------------------+--------------------+
+|        |   Confirmed Case   |   Suspected Case  |    Hospitalized    | Travel History Yes | Travel History No  |
++--------+--------------------+-------------------+--------------------+--------------------+--------------------+
+|  Mean  | 427.89256198347107 | 21.39669421487603 | 1.1818181818181819 | 2.1735537190082646 | 0.7272727272727273 |
+| Median |        6.0         |        0.0        |        0.0         |        1.0         |        0.0         |
+| Modus  |      0    0.0      |      0    0.0     |      0    0.0      |      0    0.0      |      0    0.0      |
+|        |   dtype: float64   |   dtype: float64  |   dtype: float64   |   dtype: float64   |   dtype: float64   |
++--------+--------------------+-------------------+--------------------+--------------------+--------------------+
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>3. Mendeskripsikan kemiringan/skewned dari data setiap variabel</strong></p>
+<p><em>tabel ditampilkan satu per satu</em></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;Confirmed_Cases&#39;</span><span class="p">],</span> <span class="n">hist</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">kde</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="nb">int</span> <span class="p">(</span><span class="mi">180</span><span class="o">/</span><span class="mi">5</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span> <span class="s1">&#39;darkblue&#39;</span><span class="p">,</span><span class="n">hist_kws</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;edgecolor&#39;</span><span class="p">:</span> <span class="s1">&#39;black&#39;</span><span class="p">},</span> <span class="n">kde_kws</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;linewidth&#39;</span><span class="p">:</span><span class="mi">4</span><span class="p">})</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.7/dist-packages/seaborn/distributions.py:2619: FutureWarning: `distplot` is a deprecated function and will be removed in a future version. Please adapt your code to use either `displot` (a figure-level function with similar flexibility) or `histplot` (an axes-level function for histograms).
+  warnings.warn(msg, FutureWarning)
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7fba5505acd0&gt;
+</pre></div>
+</div>
+<img alt="_images/notebooks_14_2.png" src="_images/notebooks_14_2.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;Suspected_Cases&#39;</span><span class="p">],</span> <span class="n">hist</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">kde</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="nb">int</span> <span class="p">(</span><span class="mi">180</span><span class="o">/</span><span class="mi">5</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span> <span class="s1">&#39;darkblue&#39;</span><span class="p">,</span><span class="n">hist_kws</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;edgecolor&#39;</span><span class="p">:</span> <span class="s1">&#39;black&#39;</span><span class="p">},</span> <span class="n">kde_kws</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;linewidth&#39;</span><span class="p">:</span><span class="mi">4</span><span class="p">})</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.7/dist-packages/seaborn/distributions.py:2619: FutureWarning: `distplot` is a deprecated function and will be removed in a future version. Please adapt your code to use either `displot` (a figure-level function with similar flexibility) or `histplot` (an axes-level function for histograms).
+  warnings.warn(msg, FutureWarning)
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7fba549eca90&gt;
+</pre></div>
+</div>
+<img alt="_images/notebooks_15_2.png" src="_images/notebooks_15_2.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;Hospitalized&#39;</span><span class="p">],</span> <span class="n">hist</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">kde</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="nb">int</span> <span class="p">(</span><span class="mi">180</span><span class="o">/</span><span class="mi">5</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span> <span class="s1">&#39;darkblue&#39;</span><span class="p">,</span><span class="n">hist_kws</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;edgecolor&#39;</span><span class="p">:</span> <span class="s1">&#39;black&#39;</span><span class="p">},</span> <span class="n">kde_kws</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;linewidth&#39;</span><span class="p">:</span><span class="mi">4</span><span class="p">})</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.7/dist-packages/seaborn/distributions.py:2619: FutureWarning: `distplot` is a deprecated function and will be removed in a future version. Please adapt your code to use either `displot` (a figure-level function with similar flexibility) or `histplot` (an axes-level function for histograms).
+  warnings.warn(msg, FutureWarning)
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7fba54947490&gt;
+</pre></div>
+</div>
+<img alt="_images/notebooks_16_2.png" src="_images/notebooks_16_2.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;Travel_History_Yes&#39;</span><span class="p">],</span> <span class="n">hist</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">kde</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="nb">int</span> <span class="p">(</span><span class="mi">180</span><span class="o">/</span><span class="mi">5</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span> <span class="s1">&#39;darkblue&#39;</span><span class="p">,</span><span class="n">hist_kws</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;edgecolor&#39;</span><span class="p">:</span> <span class="s1">&#39;black&#39;</span><span class="p">},</span> <span class="n">kde_kws</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;linewidth&#39;</span><span class="p">:</span><span class="mi">4</span><span class="p">})</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.7/dist-packages/seaborn/distributions.py:2619: FutureWarning: `distplot` is a deprecated function and will be removed in a future version. Please adapt your code to use either `displot` (a figure-level function with similar flexibility) or `histplot` (an axes-level function for histograms).
+  warnings.warn(msg, FutureWarning)
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7fba5482a3d0&gt;
+</pre></div>
+</div>
+<img alt="_images/notebooks_17_2.png" src="_images/notebooks_17_2.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;Travel_History_No&#39;</span><span class="p">],</span> <span class="n">hist</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">kde</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="nb">int</span> <span class="p">(</span><span class="mi">180</span><span class="o">/</span><span class="mi">5</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span> <span class="s1">&#39;darkblue&#39;</span><span class="p">,</span><span class="n">hist_kws</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;edgecolor&#39;</span><span class="p">:</span> <span class="s1">&#39;black&#39;</span><span class="p">},</span> <span class="n">kde_kws</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;linewidth&#39;</span><span class="p">:</span><span class="mi">4</span><span class="p">})</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.7/dist-packages/seaborn/distributions.py:2619: FutureWarning: `distplot` is a deprecated function and will be removed in a future version. Please adapt your code to use either `displot` (a figure-level function with similar flexibility) or `histplot` (an axes-level function for histograms).
+  warnings.warn(msg, FutureWarning)
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7fba5493ba90&gt;
+</pre></div>
+</div>
+<img alt="_images/notebooks_18_2.png" src="_images/notebooks_18_2.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">nbconvert</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
+Requirement already satisfied: nbconvert in /usr/local/lib/python3.7/dist-packages (5.6.1)
+Requirement already satisfied: nbformat&gt;=4.4 in /usr/local/lib/python3.7/dist-packages (from nbconvert) (5.4.0)
+Requirement already satisfied: defusedxml in /usr/local/lib/python3.7/dist-packages (from nbconvert) (0.7.1)
+Requirement already satisfied: pygments in /usr/local/lib/python3.7/dist-packages (from nbconvert) (2.6.1)
+Requirement already satisfied: jupyter-core in /usr/local/lib/python3.7/dist-packages (from nbconvert) (4.11.1)
+Requirement already satisfied: jinja2&gt;=2.4 in /usr/local/lib/python3.7/dist-packages (from nbconvert) (2.11.3)
+Requirement already satisfied: mistune&lt;2,&gt;=0.8.1 in /usr/local/lib/python3.7/dist-packages (from nbconvert) (0.8.4)
+Requirement already satisfied: entrypoints&gt;=0.2.2 in /usr/local/lib/python3.7/dist-packages (from nbconvert) (0.4)
+Requirement already satisfied: pandocfilters&gt;=1.4.1 in /usr/local/lib/python3.7/dist-packages (from nbconvert) (1.5.0)
+Requirement already satisfied: testpath in /usr/local/lib/python3.7/dist-packages (from nbconvert) (0.6.0)
+Requirement already satisfied: bleach in /usr/local/lib/python3.7/dist-packages (from nbconvert) (5.0.1)
+Requirement already satisfied: traitlets&gt;=4.2 in /usr/local/lib/python3.7/dist-packages (from nbconvert) (5.1.1)
+Requirement already satisfied: MarkupSafe&gt;=0.23 in /usr/local/lib/python3.7/dist-packages (from jinja2&gt;=2.4-&gt;nbconvert) (2.0.1)
+Requirement already satisfied: jsonschema&gt;=2.6 in /usr/local/lib/python3.7/dist-packages (from nbformat&gt;=4.4-&gt;nbconvert) (4.3.3)
+Requirement already satisfied: fastjsonschema in /usr/local/lib/python3.7/dist-packages (from nbformat&gt;=4.4-&gt;nbconvert) (2.16.1)
+Requirement already satisfied: importlib-metadata in /usr/local/lib/python3.7/dist-packages (from jsonschema&gt;=2.6-&gt;nbformat&gt;=4.4-&gt;nbconvert) (4.12.0)
+Requirement already satisfied: typing-extensions in /usr/local/lib/python3.7/dist-packages (from jsonschema&gt;=2.6-&gt;nbformat&gt;=4.4-&gt;nbconvert) (4.1.1)
+Requirement already satisfied: pyrsistent!=0.17.0,!=0.17.1,!=0.17.2,&gt;=0.14.0 in /usr/local/lib/python3.7/dist-packages (from jsonschema&gt;=2.6-&gt;nbformat&gt;=4.4-&gt;nbconvert) (0.18.1)
+Requirement already satisfied: importlib-resources&gt;=1.4.0 in /usr/local/lib/python3.7/dist-packages (from jsonschema&gt;=2.6-&gt;nbformat&gt;=4.4-&gt;nbconvert) (5.9.0)
+Requirement already satisfied: attrs&gt;=17.4.0 in /usr/local/lib/python3.7/dist-packages (from jsonschema&gt;=2.6-&gt;nbformat&gt;=4.4-&gt;nbconvert) (22.1.0)
+Requirement already satisfied: zipp&gt;=3.1.0 in /usr/local/lib/python3.7/dist-packages (from importlib-resources&gt;=1.4.0-&gt;jsonschema&gt;=2.6-&gt;nbformat&gt;=4.4-&gt;nbconvert) (3.8.1)
+Requirement already satisfied: six&gt;=1.9.0 in /usr/local/lib/python3.7/dist-packages (from bleach-&gt;nbconvert) (1.15.0)
+Requirement already satisfied: webencodings in /usr/local/lib/python3.7/dist-packages (from bleach-&gt;nbconvert) (0.5.1)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pwd
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/content
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">shell</span>
+jupyter nbconvert --to html /content/drive/MyDrive/datamining/tugas/_build/html/notebooks.ipynb
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[NbConvertApp] Converting notebook /content/drive/MyDrive/datamining/tugas/_build/html/notebooks.ipynb to html
+[NbConvertApp] Writing 370889 bytes to /content/drive/MyDrive/datamining/tugas/_build/html/notebooks.html
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="markdown.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Markdown Files</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="markdown-notebooks.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Notebooks with MyST Markdown</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By The Jupyter Book Community<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
