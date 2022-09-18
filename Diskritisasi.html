@@ -52,7 +52,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="&lt;no title&gt;" href="KNearestNeighbor.html" />
+    <link rel="next" title="TUGAS 3" href="KNN.html" />
     <link rel="prev" title="TUGAS 1" href="notebooks.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -130,6 +130,13 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="current reference internal" href="#">
    <strong>
     TUGAS 2
+   </strong>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="KNN.html">
+   <strong>
+    TUGAS 3
    </strong>
   </a>
  </li>
@@ -453,7 +460,7 @@ menjadi pemecah data latih berikutnya</p>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-f1c9e9d1-0cba-41a0-8faf-4a18519c4f31">
+  <div id="df-8340f3f0-a5ab-44af-a5f1-e983af64f38e">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -573,7 +580,7 @@ menjadi pemecah data latih berikutnya</p>
 </table>
 <p>150 rows × 5 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-f1c9e9d1-0cba-41a0-8faf-4a18519c4f31')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-8340f3f0-a5ab-44af-a5f1-e983af64f38e')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -624,12 +631,12 @@ menjadi pemecah data latih berikutnya</p>
 
       <script>
         const buttonEl =
-          document.querySelector('#df-f1c9e9d1-0cba-41a0-8faf-4a18519c4f31 button.colab-df-convert');
+          document.querySelector('#df-8340f3f0-a5ab-44af-a5f1-e983af64f38e button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-f1c9e9d1-0cba-41a0-8faf-4a18519c4f31');
+          const element = document.querySelector('#df-8340f3f0-a5ab-44af-a5f1-e983af64f38e');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -707,7 +714,7 @@ Name: sepal_length, dtype: int64
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-82048a95-667a-4b4c-81be-5e4ecb29774e">
+  <div id="df-cbec2c98-766e-48c5-a2aa-33d3dc5878aa">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -791,7 +798,7 @@ Name: sepal_length, dtype: int64
 </table>
 <p>150 rows × 2 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-82048a95-667a-4b4c-81be-5e4ecb29774e')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-cbec2c98-766e-48c5-a2aa-33d3dc5878aa')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -842,12 +849,12 @@ Name: sepal_length, dtype: int64
 
       <script>
         const buttonEl =
-          document.querySelector('#df-82048a95-667a-4b4c-81be-5e4ecb29774e button.colab-df-convert');
+          document.querySelector('#df-cbec2c98-766e-48c5-a2aa-33d3dc5878aa button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-82048a95-667a-4b4c-81be-5e4ecb29774e');
+          const element = document.querySelector('#df-cbec2c98-766e-48c5-a2aa-33d3dc5878aa');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -922,7 +929,7 @@ Name: sepal_width, dtype: int64
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-2ad0724e-a5a5-4b9d-9509-4cde7c3f4bf1">
+  <div id="df-1c3dc71d-11ea-4c83-9863-abf4813044dd">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1006,7 +1013,7 @@ Name: sepal_width, dtype: int64
 </table>
 <p>150 rows × 2 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-2ad0724e-a5a5-4b9d-9509-4cde7c3f4bf1')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-1c3dc71d-11ea-4c83-9863-abf4813044dd')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1057,12 +1064,12 @@ Name: sepal_width, dtype: int64
 
       <script>
         const buttonEl =
-          document.querySelector('#df-2ad0724e-a5a5-4b9d-9509-4cde7c3f4bf1 button.colab-df-convert');
+          document.querySelector('#df-1c3dc71d-11ea-4c83-9863-abf4813044dd button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-2ad0724e-a5a5-4b9d-9509-4cde7c3f4bf1');
+          const element = document.querySelector('#df-1c3dc71d-11ea-4c83-9863-abf4813044dd');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1137,7 +1144,7 @@ Name: petal_length, dtype: int64
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-a16cad85-21dd-4f55-a13f-89c163614c49">
+  <div id="df-61d01a3c-bdea-42f0-a24d-9b0b2ed93ae5">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1221,7 +1228,7 @@ Name: petal_length, dtype: int64
 </table>
 <p>150 rows × 2 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-a16cad85-21dd-4f55-a13f-89c163614c49')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-61d01a3c-bdea-42f0-a24d-9b0b2ed93ae5')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1272,12 +1279,12 @@ Name: petal_length, dtype: int64
 
       <script>
         const buttonEl =
-          document.querySelector('#df-a16cad85-21dd-4f55-a13f-89c163614c49 button.colab-df-convert');
+          document.querySelector('#df-61d01a3c-bdea-42f0-a24d-9b0b2ed93ae5 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-a16cad85-21dd-4f55-a13f-89c163614c49');
+          const element = document.querySelector('#df-61d01a3c-bdea-42f0-a24d-9b0b2ed93ae5');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1352,7 +1359,7 @@ Name: petal_width, dtype: int64
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-8062a3f4-efa1-4add-a187-d3c84712d815">
+  <div id="df-14c1ebb5-e3cd-4e6c-a999-2f79a75a4429">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1436,7 +1443,7 @@ Name: petal_width, dtype: int64
 </table>
 <p>150 rows × 2 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-8062a3f4-efa1-4add-a187-d3c84712d815')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-14c1ebb5-e3cd-4e6c-a999-2f79a75a4429')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1487,12 +1494,12 @@ Name: petal_width, dtype: int64
 
       <script>
         const buttonEl =
-          document.querySelector('#df-8062a3f4-efa1-4add-a187-d3c84712d815 button.colab-df-convert');
+          document.querySelector('#df-14c1ebb5-e3cd-4e6c-a999-2f79a75a4429 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-8062a3f4-efa1-4add-a187-d3c84712d815');
+          const element = document.querySelector('#df-14c1ebb5-e3cd-4e6c-a999-2f79a75a4429');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1522,7 +1529,7 @@ Name: petal_width, dtype: int64
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-b283ca2e-d794-42a6-b5bb-eb2a7afe9326">
+  <div id="df-29922dfe-d2b3-41f2-aea3-31ec20a9282b">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1642,7 +1649,7 @@ Name: petal_width, dtype: int64
 </table>
 <p>150 rows × 5 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-b283ca2e-d794-42a6-b5bb-eb2a7afe9326')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-29922dfe-d2b3-41f2-aea3-31ec20a9282b')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1693,12 +1700,12 @@ Name: petal_width, dtype: int64
 
       <script>
         const buttonEl =
-          document.querySelector('#df-b283ca2e-d794-42a6-b5bb-eb2a7afe9326 button.colab-df-convert');
+          document.querySelector('#df-29922dfe-d2b3-41f2-aea3-31ec20a9282b button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-b283ca2e-d794-42a6-b5bb-eb2a7afe9326');
+          const element = document.querySelector('#df-29922dfe-d2b3-41f2-aea3-31ec20a9282b');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1774,7 +1781,7 @@ Name: sepal_length, dtype: int64
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-f0cfc916-8e11-4031-804c-87417ed2fe3a">
+  <div id="df-394f69f1-63d1-4fe3-aa82-bc03caa622ff">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1858,7 +1865,7 @@ Name: sepal_length, dtype: int64
 </table>
 <p>150 rows × 2 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-f0cfc916-8e11-4031-804c-87417ed2fe3a')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-394f69f1-63d1-4fe3-aa82-bc03caa622ff')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1909,12 +1916,12 @@ Name: sepal_length, dtype: int64
 
       <script>
         const buttonEl =
-          document.querySelector('#df-f0cfc916-8e11-4031-804c-87417ed2fe3a button.colab-df-convert');
+          document.querySelector('#df-394f69f1-63d1-4fe3-aa82-bc03caa622ff button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-f0cfc916-8e11-4031-804c-87417ed2fe3a');
+          const element = document.querySelector('#df-394f69f1-63d1-4fe3-aa82-bc03caa622ff');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1986,7 +1993,7 @@ Name: sepal_width, dtype: int64
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-a23f3c36-b062-4adf-9bc5-7751228e5b7c">
+  <div id="df-c0d94a26-6ab1-436a-82aa-9c544d065f2a">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -2070,7 +2077,7 @@ Name: sepal_width, dtype: int64
 </table>
 <p>150 rows × 2 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-a23f3c36-b062-4adf-9bc5-7751228e5b7c')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-c0d94a26-6ab1-436a-82aa-9c544d065f2a')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -2121,12 +2128,12 @@ Name: sepal_width, dtype: int64
 
       <script>
         const buttonEl =
-          document.querySelector('#df-a23f3c36-b062-4adf-9bc5-7751228e5b7c button.colab-df-convert');
+          document.querySelector('#df-c0d94a26-6ab1-436a-82aa-9c544d065f2a button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-a23f3c36-b062-4adf-9bc5-7751228e5b7c');
+          const element = document.querySelector('#df-c0d94a26-6ab1-436a-82aa-9c544d065f2a');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -2198,7 +2205,7 @@ Name: petal_length, dtype: int64
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-aac34229-db52-420b-8c7b-2c501100bd01">
+  <div id="df-3d2d2e4d-1da1-4e7b-8a2d-310926f56f0c">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -2282,7 +2289,7 @@ Name: petal_length, dtype: int64
 </table>
 <p>150 rows × 2 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-aac34229-db52-420b-8c7b-2c501100bd01')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-3d2d2e4d-1da1-4e7b-8a2d-310926f56f0c')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -2333,12 +2340,12 @@ Name: petal_length, dtype: int64
 
       <script>
         const buttonEl =
-          document.querySelector('#df-aac34229-db52-420b-8c7b-2c501100bd01 button.colab-df-convert');
+          document.querySelector('#df-3d2d2e4d-1da1-4e7b-8a2d-310926f56f0c button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-aac34229-db52-420b-8c7b-2c501100bd01');
+          const element = document.querySelector('#df-3d2d2e4d-1da1-4e7b-8a2d-310926f56f0c');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -2410,7 +2417,7 @@ Name: petal_width, dtype: int64
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-91237095-d650-4cd4-bf36-df985f935361">
+  <div id="df-18260de9-7bf3-4c6a-977d-260c0e11ef3b">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -2494,7 +2501,7 @@ Name: petal_width, dtype: int64
 </table>
 <p>150 rows × 2 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-91237095-d650-4cd4-bf36-df985f935361')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-18260de9-7bf3-4c6a-977d-260c0e11ef3b')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -2545,12 +2552,12 @@ Name: petal_width, dtype: int64
 
       <script>
         const buttonEl =
-          document.querySelector('#df-91237095-d650-4cd4-bf36-df985f935361 button.colab-df-convert');
+          document.querySelector('#df-18260de9-7bf3-4c6a-977d-260c0e11ef3b button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-91237095-d650-4cd4-bf36-df985f935361');
+          const element = document.querySelector('#df-18260de9-7bf3-4c6a-977d-260c0e11ef3b');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -2580,7 +2587,7 @@ Name: petal_width, dtype: int64
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-b32438e1-8fc8-436c-8c0f-ed2aecb0bf3c">
+  <div id="df-de809a96-52f7-4d48-aad8-f0279fca45b0">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -2700,7 +2707,7 @@ Name: petal_width, dtype: int64
 </table>
 <p>150 rows × 5 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-b32438e1-8fc8-436c-8c0f-ed2aecb0bf3c')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-de809a96-52f7-4d48-aad8-f0279fca45b0')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -2751,12 +2758,12 @@ Name: petal_width, dtype: int64
 
       <script>
         const buttonEl =
-          document.querySelector('#df-b32438e1-8fc8-436c-8c0f-ed2aecb0bf3c button.colab-df-convert');
+          document.querySelector('#df-de809a96-52f7-4d48-aad8-f0279fca45b0 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-b32438e1-8fc8-436c-8c0f-ed2aecb0bf3c');
+          const element = document.querySelector('#df-de809a96-52f7-4d48-aad8-f0279fca45b0');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -3254,10 +3261,10 @@ Name: petal_width, dtype: int64
             <p class="prev-next-title"><strong>TUGAS 1</strong></p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="KNearestNeighbor.html" title="next page">
+    <a class='right-next' id="next-link" href="KNN.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">&lt;no title&gt;</p>
+        <p class="prev-next-title"><strong>TUGAS 3</strong></p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
