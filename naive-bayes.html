@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>TUGAS 4 &#8212; Normalita Eka Ariyanti - 200411100084</title>
+    <title>NAIVE-BAYES &#8212; Normalita Eka Ariyanti - 200411100084</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,8 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="TUGAS 5" href="decisionTree.html" />
-    <link rel="prev" title="NAIVE-BAYES" href="naive-bayes.html" />
+    <link rel="next" title="TUGAS 4" href="k-means.html" />
+    <link rel="prev" title="TUGAS 3" href="KNearestNeighbor.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -140,15 +140,15 @@ const thebe_selector_output = ".output, .cell_output"
    </strong>
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="naive-bayes.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    <strong>
     NAIVE-BAYES
    </strong>
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="k-means.html">
    <strong>
     TUGAS 4
    </strong>
@@ -220,7 +220,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://colab.research.google.com/github/normalitariyn/datamining/blob/gh-pages/_sources/k-means.ipynb"
+        <a href="https://colab.research.google.com/github/normalitariyn/datamining/blob/gh-pages/_sources/naive-bayes.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -280,7 +280,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/normalitariyn/datamining/issues/new?title=Issue%20on%20page%20%2Fk-means.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/normalitariyn/datamining/issues/new?title=Issue%20on%20page%20%2Fnaive-bayes.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -308,7 +308,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="_sources/k-means.ipynb"
+        <a href="_sources/naive-bayes.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -375,9 +375,9 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#algoritma-k-means">
+  <a class="reference internal nav-link" href="#algoritma">
    <strong>
-    Algoritma K-Means
+    Algoritma
    </strong>
   </a>
  </li>
@@ -397,7 +397,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>TUGAS 4</h1>
+                <h1>NAIVE-BAYES</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -415,9 +415,9 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#algoritma-k-means">
+  <a class="reference internal nav-link" href="#algoritma">
    <strong>
-    Algoritma K-Means
+    Algoritma
    </strong>
   </a>
  </li>
@@ -438,21 +438,20 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="tugas-4">
-<h1><strong>TUGAS 4</strong><a class="headerlink" href="#tugas-4" title="Permalink to this headline">#</a></h1>
-<p>Clustering K-Means</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="naive-bayes">
+<h1><strong>NAIVE-BAYES</strong><a class="headerlink" href="#naive-bayes" title="Permalink to this headline">#</a></h1>
 <section id="pengertian">
 <h2><strong>Pengertian</strong><a class="headerlink" href="#pengertian" title="Permalink to this headline">#</a></h2>
-<p>Algoritma K-Means merupakan salah satu algoritma Clustering yang masuk ke dalam kelompok Unsupervised learning yang digunakan untuk mengelompokkan data ke dalam beberapa kelompok dengan sistem partisi sehingga data yang berkarakteristik sama dimasukkan ke dalam satu kelompok yang sama</p>
+<p>Algoritma Naive Bayes adalah algoritma yang mempelajari probabilitas suatu objek dengan ciri-ciri tertentu yang termasuk dalam kelompok atau kelas tertentu.</p>
 </section>
-<section id="algoritma-k-means">
-<h2><strong>Algoritma K-Means</strong><a class="headerlink" href="#algoritma-k-means" title="Permalink to this headline">#</a></h2>
+<section id="algoritma">
+<h2><strong>Algoritma</strong><a class="headerlink" href="#algoritma" title="Permalink to this headline">#</a></h2>
+<p>Tahapan dari proses algoritma Naive Bayes adalah:</p>
 <ol class="simple">
-<li><p>Menentukan jumlah cluster yang akan dibentuk</p></li>
-<li><p>Menentukan titik pusat cluster (centroid) secara acak</p></li>
-<li><p>Menghitung jarak masing-masing data ke pusat cluster kemudian memasukan data tersebut ke cluster tertentu jika memiliki jarak terdekat (jarak yang nilainya rendah)</p></li>
-<li><p>Menentukan pusat cluster baru dengan menghitung rata-rata dari anggota cluster</p></li>
-<li><p>Mengulangi langkah ketiga dan keempat hingga tidak ada data yang berpindah tempat.</p></li>
+<li><p>Menghitung jumlah kelas / label,</p></li>
+<li><p>Menghitung Jumlah Kasus Per Kelas,</p></li>
+<li><p>Kalikan Semua Variable Kelas,</p></li>
+<li><p>Bandingkan Hasil Per Kelas.</p></li>
 </ol>
 </section>
 <section id="implementasi-code">
@@ -460,28 +459,64 @@ title="Print to PDF"
 <p>import modul</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span> <span class="c1">#split dataset into train and test data</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span> 
-<span class="kn">from</span> <span class="nn">sklearn.cluster</span> <span class="kn">import</span> <span class="n">KMeans</span>
-<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">MinMaxScaler</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>Menampilkan dataset</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/HanifSantoso05/dataset_matkul/main/Iris.csv&quot;</span>
-<span class="c1">#colnames = [&#39;sepal-length&#39;, &#39;sepal-width&#39;, &#39;petal-length&#39;, &#39;petal-width&#39;, &#39;Class&#39;]</span>
-<span class="n">air</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
-<span class="n">air</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># library for Naive Bayes Gaussian</span>
+<span class="kn">from</span> <span class="nn">sklearn.naive_bayes</span> <span class="kn">import</span> <span class="n">GaussianNB</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">make_scorer</span><span class="p">,</span> <span class="n">accuracy_score</span><span class="p">,</span><span class="n">precision_score</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">classification_report</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">confusion_matrix</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">precision_score</span><span class="p">,</span><span class="n">recall_score</span><span class="p">,</span><span class="n">f1_score</span>
+<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">LabelEncoder</span>
+
+<span class="c1">#Model Select</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="kn">from</span> <span class="nn">sklearn.naive_bayes</span> <span class="kn">import</span> <span class="n">GaussianNB</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="ne">UserWarning</span><span class="p">,</span> <span class="n">append</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>mengambil dataset iris pada github</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataset_url</span> <span class="o">=</span> <span class="s2">&quot;https://gist.githubusercontent.com/netj/8836201/raw/6f9306ad21398ea43cba4f7d537619d0e07d5ae3/iris.csv&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>menampilkan 5 data teratas dari dataset</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">dataset_url</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-d1ed0416-0b87-4752-bc7d-fb80f44f243f">
+  <div id="df-77839b63-8cf5-4fb1-a418-2f7495f05940">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -501,64 +536,58 @@ title="Print to PDF"
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>Id</th>
-      <th>SepalLengthCm</th>
-      <th>SepalWidthCm</th>
-      <th>PetalLengthCm</th>
-      <th>PetalWidthCm</th>
-      <th>Species</th>
+      <th>sepal.length</th>
+      <th>sepal.width</th>
+      <th>petal.length</th>
+      <th>petal.width</th>
+      <th>variety</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>1</td>
       <td>5.1</td>
       <td>3.5</td>
       <td>1.4</td>
       <td>0.2</td>
-      <td>Iris-setosa</td>
+      <td>Setosa</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>2</td>
       <td>4.9</td>
       <td>3.0</td>
       <td>1.4</td>
       <td>0.2</td>
-      <td>Iris-setosa</td>
+      <td>Setosa</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>3</td>
       <td>4.7</td>
       <td>3.2</td>
       <td>1.3</td>
       <td>0.2</td>
-      <td>Iris-setosa</td>
+      <td>Setosa</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>4</td>
       <td>4.6</td>
       <td>3.1</td>
       <td>1.5</td>
       <td>0.2</td>
-      <td>Iris-setosa</td>
+      <td>Setosa</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>5</td>
       <td>5.0</td>
       <td>3.6</td>
       <td>1.4</td>
       <td>0.2</td>
-      <td>Iris-setosa</td>
+      <td>Setosa</td>
     </tr>
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-d1ed0416-0b87-4752-bc7d-fb80f44f243f')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-77839b63-8cf5-4fb1-a418-2f7495f05940')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -609,12 +638,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-d1ed0416-0b87-4752-bc7d-fb80f44f243f button.colab-df-convert');
+          document.querySelector('#df-77839b63-8cf5-4fb1-a418-2f7495f05940 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-d1ed0416-0b87-4752-bc7d-fb80f44f243f');
+          const element = document.querySelector('#df-77839b63-8cf5-4fb1-a418-2f7495f05940');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -635,18 +664,42 @@ title="Print to PDF"
   </div>
 </div></div>
 </div>
-<p>Menentukan fitur yang akan dikelompokkan.</p>
-<p>Disini fitur yang akan digunakan adalah SepalLengthCm, SepalWidthCm, PetalLengthCm,	PetalWidthCm</p>
+<p>melihat baris (banyak data) dan kolom (banyak atribut/fitur)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">air_x</span> <span class="o">=</span> <span class="n">air</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span>
-<span class="n">air_x</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#check number of rows and columns in dataset</span>
+<span class="n">df</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(150, 5)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">load_iris</span>
+<span class="n">iris</span> <span class="o">=</span> <span class="n">load_iris</span><span class="p">()</span>
+<span class="n">X</span><span class="o">=</span><span class="n">iris</span><span class="o">.</span><span class="n">data</span>
+<span class="n">y</span><span class="o">=</span><span class="n">iris</span><span class="o">.</span><span class="n">target</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>menampilkan dataframe tanpa label dari setiap data</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#create a dataframe with all training data except the target column</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;variety&quot;</span><span class="p">])</span><span class="c1">#check that the target variable has been removed</span>
+<span class="n">X</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-33dd081f-a3a0-4b55-818c-002439f4d321">
+  <div id="df-f3b5e14d-f71d-448b-8746-b1bddfd9fbf2">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -666,52 +719,52 @@ title="Print to PDF"
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>Id</th>
-      <th>SepalLengthCm</th>
-      <th>SepalWidthCm</th>
-      <th>PetalLengthCm</th>
+      <th>sepal.length</th>
+      <th>sepal.width</th>
+      <th>petal.length</th>
+      <th>petal.width</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>1</td>
       <td>5.1</td>
       <td>3.5</td>
       <td>1.4</td>
+      <td>0.2</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>2</td>
       <td>4.9</td>
       <td>3.0</td>
       <td>1.4</td>
+      <td>0.2</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>3</td>
       <td>4.7</td>
       <td>3.2</td>
       <td>1.3</td>
+      <td>0.2</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>4</td>
       <td>4.6</td>
       <td>3.1</td>
       <td>1.5</td>
+      <td>0.2</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>5</td>
       <td>5.0</td>
       <td>3.6</td>
       <td>1.4</td>
+      <td>0.2</td>
     </tr>
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-33dd081f-a3a0-4b55-818c-002439f4d321')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-f3b5e14d-f71d-448b-8746-b1bddfd9fbf2')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -762,12 +815,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-33dd081f-a3a0-4b55-818c-002439f4d321 button.colab-df-convert');
+          document.querySelector('#df-f3b5e14d-f71d-448b-8746-b1bddfd9fbf2 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-33dd081f-a3a0-4b55-818c-002439f4d321');
+          const element = document.querySelector('#df-f3b5e14d-f71d-448b-8746-b1bddfd9fbf2');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -788,282 +841,141 @@ title="Print to PDF"
   </div>
 </div></div>
 </div>
-<p>Mengubah dataframe ke dalam bentuk array</p>
+<p>Menentukan jumlah data tes/uji yang akan diambil (dalam bentuk persen). Data uji yang akan diambil sebanyak 30%</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">air_x</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">x_array</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[  1.    5.1   3.5   1.4]
- [  2.    4.9   3.    1.4]
- [  3.    4.7   3.2   1.3]
- [  4.    4.6   3.1   1.5]
- [  5.    5.    3.6   1.4]
- [  6.    5.4   3.9   1.7]
- [  7.    4.6   3.4   1.4]
- [  8.    5.    3.4   1.5]
- [  9.    4.4   2.9   1.4]
- [ 10.    4.9   3.1   1.5]
- [ 11.    5.4   3.7   1.5]
- [ 12.    4.8   3.4   1.6]
- [ 13.    4.8   3.    1.4]
- [ 14.    4.3   3.    1.1]
- [ 15.    5.8   4.    1.2]
- [ 16.    5.7   4.4   1.5]
- [ 17.    5.4   3.9   1.3]
- [ 18.    5.1   3.5   1.4]
- [ 19.    5.7   3.8   1.7]
- [ 20.    5.1   3.8   1.5]
- [ 21.    5.4   3.4   1.7]
- [ 22.    5.1   3.7   1.5]
- [ 23.    4.6   3.6   1. ]
- [ 24.    5.1   3.3   1.7]
- [ 25.    4.8   3.4   1.9]
- [ 26.    5.    3.    1.6]
- [ 27.    5.    3.4   1.6]
- [ 28.    5.2   3.5   1.5]
- [ 29.    5.2   3.4   1.4]
- [ 30.    4.7   3.2   1.6]
- [ 31.    4.8   3.1   1.6]
- [ 32.    5.4   3.4   1.5]
- [ 33.    5.2   4.1   1.5]
- [ 34.    5.5   4.2   1.4]
- [ 35.    4.9   3.1   1.5]
- [ 36.    5.    3.2   1.2]
- [ 37.    5.5   3.5   1.3]
- [ 38.    4.9   3.1   1.5]
- [ 39.    4.4   3.    1.3]
- [ 40.    5.1   3.4   1.5]
- [ 41.    5.    3.5   1.3]
- [ 42.    4.5   2.3   1.3]
- [ 43.    4.4   3.2   1.3]
- [ 44.    5.    3.5   1.6]
- [ 45.    5.1   3.8   1.9]
- [ 46.    4.8   3.    1.4]
- [ 47.    5.1   3.8   1.6]
- [ 48.    4.6   3.2   1.4]
- [ 49.    5.3   3.7   1.5]
- [ 50.    5.    3.3   1.4]
- [ 51.    7.    3.2   4.7]
- [ 52.    6.4   3.2   4.5]
- [ 53.    6.9   3.1   4.9]
- [ 54.    5.5   2.3   4. ]
- [ 55.    6.5   2.8   4.6]
- [ 56.    5.7   2.8   4.5]
- [ 57.    6.3   3.3   4.7]
- [ 58.    4.9   2.4   3.3]
- [ 59.    6.6   2.9   4.6]
- [ 60.    5.2   2.7   3.9]
- [ 61.    5.    2.    3.5]
- [ 62.    5.9   3.    4.2]
- [ 63.    6.    2.2   4. ]
- [ 64.    6.1   2.9   4.7]
- [ 65.    5.6   2.9   3.6]
- [ 66.    6.7   3.1   4.4]
- [ 67.    5.6   3.    4.5]
- [ 68.    5.8   2.7   4.1]
- [ 69.    6.2   2.2   4.5]
- [ 70.    5.6   2.5   3.9]
- [ 71.    5.9   3.2   4.8]
- [ 72.    6.1   2.8   4. ]
- [ 73.    6.3   2.5   4.9]
- [ 74.    6.1   2.8   4.7]
- [ 75.    6.4   2.9   4.3]
- [ 76.    6.6   3.    4.4]
- [ 77.    6.8   2.8   4.8]
- [ 78.    6.7   3.    5. ]
- [ 79.    6.    2.9   4.5]
- [ 80.    5.7   2.6   3.5]
- [ 81.    5.5   2.4   3.8]
- [ 82.    5.5   2.4   3.7]
- [ 83.    5.8   2.7   3.9]
- [ 84.    6.    2.7   5.1]
- [ 85.    5.4   3.    4.5]
- [ 86.    6.    3.4   4.5]
- [ 87.    6.7   3.1   4.7]
- [ 88.    6.3   2.3   4.4]
- [ 89.    5.6   3.    4.1]
- [ 90.    5.5   2.5   4. ]
- [ 91.    5.5   2.6   4.4]
- [ 92.    6.1   3.    4.6]
- [ 93.    5.8   2.6   4. ]
- [ 94.    5.    2.3   3.3]
- [ 95.    5.6   2.7   4.2]
- [ 96.    5.7   3.    4.2]
- [ 97.    5.7   2.9   4.2]
- [ 98.    6.2   2.9   4.3]
- [ 99.    5.1   2.5   3. ]
- [100.    5.7   2.8   4.1]
- [101.    6.3   3.3   6. ]
- [102.    5.8   2.7   5.1]
- [103.    7.1   3.    5.9]
- [104.    6.3   2.9   5.6]
- [105.    6.5   3.    5.8]
- [106.    7.6   3.    6.6]
- [107.    4.9   2.5   4.5]
- [108.    7.3   2.9   6.3]
- [109.    6.7   2.5   5.8]
- [110.    7.2   3.6   6.1]
- [111.    6.5   3.2   5.1]
- [112.    6.4   2.7   5.3]
- [113.    6.8   3.    5.5]
- [114.    5.7   2.5   5. ]
- [115.    5.8   2.8   5.1]
- [116.    6.4   3.2   5.3]
- [117.    6.5   3.    5.5]
- [118.    7.7   3.8   6.7]
- [119.    7.7   2.6   6.9]
- [120.    6.    2.2   5. ]
- [121.    6.9   3.2   5.7]
- [122.    5.6   2.8   4.9]
- [123.    7.7   2.8   6.7]
- [124.    6.3   2.7   4.9]
- [125.    6.7   3.3   5.7]
- [126.    7.2   3.2   6. ]
- [127.    6.2   2.8   4.8]
- [128.    6.1   3.    4.9]
- [129.    6.4   2.8   5.6]
- [130.    7.2   3.    5.8]
- [131.    7.4   2.8   6.1]
- [132.    7.9   3.8   6.4]
- [133.    6.4   2.8   5.6]
- [134.    6.3   2.8   5.1]
- [135.    6.1   2.6   5.6]
- [136.    7.7   3.    6.1]
- [137.    6.3   3.4   5.6]
- [138.    6.4   3.1   5.5]
- [139.    6.    3.    4.8]
- [140.    6.9   3.1   5.4]
- [141.    6.7   3.1   5.6]
- [142.    6.9   3.1   5.1]
- [143.    5.8   2.7   5.1]
- [144.    6.8   3.2   5.9]
- [145.    6.7   3.3   5.7]
- [146.    6.7   3.    5.2]
- [147.    6.3   2.5   5. ]
- [148.    6.5   3.    5.2]
- [149.    6.2   3.4   5.4]
- [150.    5.9   3.    5.1]]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># percent_amount_of_test_data = / HUNDRED_PERCENT</span>
+<span class="n">percent_amount_of_test_data</span> <span class="o">=</span> <span class="mf">0.3</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>Melakukan normalisasi data dengan menggunakan metode <em>Min Max Scaler</em>.</p>
-<p>Normalisasi data digunakan untuk memperkecil jarak antar sehingga memudahkan dalam proses perhitungan.</p>
+<p>Melakukan Train Test Split untuk membagi dataset menjadi training set (data latih) dan test set (data uji/tes).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">scaler</span> <span class="o">=</span> <span class="n">MinMaxScaler</span><span class="p">()</span>
-<span class="n">x_scaled</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">x_array</span><span class="p">)</span>
-<span class="n">x_scaled</span>
-<span class="n">dataframe</span><span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">x_scaled</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;SepalLengthCm&#39;</span><span class="p">,</span><span class="s1">&#39;SepalWidthCm&#39;</span><span class="p">,</span><span class="s1">&#39;PetalLengthCm&#39;</span><span class="p">,</span><span class="s1">&#39;PetalWidthCm&#39;</span><span class="p">])</span> 
-<span class="nb">print</span> <span class="p">(</span><span class="n">dataframe</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span> <span class="o">=</span> <span class="n">percent_amount_of_test_data</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     SepalLengthCm  SepalWidthCm  PetalLengthCm  PetalWidthCm
-0         0.000000      0.222222       0.625000      0.067797
-1         0.006711      0.166667       0.416667      0.067797
-2         0.013423      0.111111       0.500000      0.050847
-3         0.020134      0.083333       0.458333      0.084746
-4         0.026846      0.194444       0.666667      0.067797
-..             ...           ...            ...           ...
-145       0.973154      0.666667       0.416667      0.711864
-146       0.979866      0.555556       0.208333      0.677966
-147       0.986577      0.611111       0.416667      0.711864
-148       0.993289      0.527778       0.583333      0.745763
-149       1.000000      0.444444       0.416667      0.694915
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># data latih (nilai data)</span>
+<span class="n">X_train</span> 
 
-[150 rows x 4 columns]
-</pre></div>
-</div>
-</div>
-</div>
-<p>Menentukan dan mengonfigurasi fungsi k-means dengan mengelompokkan data menjadi 3 cluster</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">kmeans</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">(</span><span class="n">n_clusters</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">init</span> <span class="o">=</span> <span class="s1">&#39;k-means++&#39;</span><span class="p">,</span> <span class="n">max_iter</span> <span class="o">=</span> <span class="mi">300</span><span class="p">,</span> <span class="n">n_init</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">random_state</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
-<span class="n">y_kmeans</span> <span class="o">=</span> <span class="n">kmeans</span><span class="o">.</span><span class="n">fit_predict</span><span class="p">(</span><span class="n">x_scaled</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">kmeans</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">x_scaled</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>KMeans(n_clusters=3, random_state=0)
-</pre></div>
-</div>
-</div>
-</div>
-<p>Menentukan nilai centroid</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">kmeans</span><span class="o">.</span><span class="n">cluster_centers_</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[0.16442953 0.19611111 0.59083333 0.07864407]
- [0.84670531 0.67171717 0.4280303  0.78582435]
- [0.52720518 0.44543651 0.3125     0.56476998]]
-</pre></div>
-</div>
-</div>
-</div>
-<p>Menambahkan kolom cluster pada dataframe</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">air</span><span class="p">[</span><span class="s2">&quot;kluster&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">kmeans</span><span class="o">.</span><span class="n">labels_</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>Visualisasi hasil clustering</p>
-<p><strong>Cara 1</strong></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Visualising the clusters</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Hasil Clustering K-Means&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x_scaled</span><span class="p">[</span><span class="n">y_kmeans</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">x_scaled</span><span class="p">[</span><span class="n">y_kmeans</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">s</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s1">&#39;purple&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;Iris-setosa&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x_scaled</span><span class="p">[</span><span class="n">y_kmeans</span> <span class="o">==</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">x_scaled</span><span class="p">[</span><span class="n">y_kmeans</span> <span class="o">==</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">s</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;Iris-versicolour&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x_scaled</span><span class="p">[</span><span class="n">y_kmeans</span> <span class="o">==</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">x_scaled</span><span class="p">[</span><span class="n">y_kmeans</span> <span class="o">==</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">s</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;Iris-virginica&#39;</span><span class="p">)</span>
+<span class="c1"># data tes (nilai data)</span>
+<span class="n">X_test</span> 
 
-<span class="c1">#Plotting the centroids of the clusters</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">kmeans</span><span class="o">.</span><span class="n">cluster_centers_</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">kmeans</span><span class="o">.</span><span class="n">cluster_centers_</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span> <span class="n">s</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;Centroids&#39;</span><span class="p">)</span>
+<span class="c1"># data latih (kelas data)</span>
+<span class="n">y_train</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="c1"># data tes (kelas data)</span>
+<span class="n">y_test</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f4a199b8d90&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([2, 1, 0, 2, 0, 2, 0, 1, 1, 1, 2, 1, 1, 1, 1, 0, 1, 1, 0, 0, 2, 1,
+       0, 0, 2, 0, 0, 1, 1, 0, 2, 1, 0, 2, 2, 1, 0, 1, 1, 1, 2, 0, 2, 0,
+       0])
 </pre></div>
 </div>
-<img alt="_images/k-means_22_1.png" src="_images/k-means_22_1.png" />
 </div>
 </div>
-<p><strong>Cara 2</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">output</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x_scaled</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span> <span class="n">x_scaled</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span> <span class="n">s</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="n">air</span><span class="o">.</span><span class="n">kluster</span><span class="p">,</span> <span class="n">marker</span> <span class="o">=</span> <span class="s2">&quot;o&quot;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="p">)</span>
-<span class="n">centers</span> <span class="o">=</span> <span class="n">kmeans</span><span class="o">.</span><span class="n">cluster_centers_</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">centers</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span> <span class="n">centers</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span> <span class="n">c</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mi">1</span> <span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s2">&quot;o&quot;</span><span class="p">);</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Hasil Clustering K-Means&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span> <span class="p">(</span><span class="n">output</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Mengaktifkan/memanggil/membuat fungsi klasifikasi Naive bayes</span>
+<span class="n">gaussian</span> <span class="o">=</span> <span class="n">GaussianNB</span><span class="p">()</span>
+<span class="c1"># Memasukkan data training pada fungsi klasifikasi naive bayes</span>
+<span class="n">gaussian</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="c1">#Menentukan hasil prediksi dari x_test</span>
+<span class="n">Y_pred</span> <span class="o">=</span> <span class="n">gaussian</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span> 
+
+<span class="n">accuracy_nb</span><span class="o">=</span><span class="nb">round</span><span class="p">(</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="n">Y_pred</span><span class="p">)</span><span class="o">*</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">acc_gaussian</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">gaussian</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="c1">#melakukan confussion matrix </span>
+<span class="n">cm</span> <span class="o">=</span> <span class="n">confusion_matrix</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">Y_pred</span><span class="p">)</span>
+
+<span class="c1">#melihat nilai akurasi, presisi, dan recall dari algoritma naive bayes </span>
+<span class="n">accuracy</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="n">Y_pred</span><span class="p">)</span>
+<span class="n">precision</span> <span class="o">=</span><span class="n">precision_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">Y_pred</span><span class="p">,</span><span class="n">average</span><span class="o">=</span><span class="s1">&#39;micro&#39;</span><span class="p">)</span>
+<span class="n">recall</span> <span class="o">=</span>  <span class="n">recall_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">Y_pred</span><span class="p">,</span><span class="n">average</span><span class="o">=</span><span class="s1">&#39;micro&#39;</span><span class="p">)</span>
+<span class="n">f1</span> <span class="o">=</span> <span class="n">f1_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="n">Y_pred</span><span class="p">,</span><span class="n">average</span><span class="o">=</span><span class="s1">&#39;micro&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Confusion matrix for Naive Bayes</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span><span class="n">cm</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;accuracy_Naive Bayes: </span><span class="si">%.3f</span><span class="s1">&#39;</span> <span class="o">%</span><span class="k">accuracy</span>)
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;precision_Naive Bayes: </span><span class="si">%.3f</span><span class="s1">&#39;</span> <span class="o">%</span><span class="k">precision</span>)
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;recall_Naive Bayes: </span><span class="si">%.3f</span><span class="s1">&#39;</span> <span class="o">%</span><span class="k">recall</span>)
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;f1-score_random_Forest : </span><span class="si">%.3f</span><span class="s1">&#39;</span> <span class="o">%</span><span class="k">f1</span>)
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/k-means_24_0.png" src="_images/k-means_24_0.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Confusion matrix for Naive Bayes
+ [[16  0  0]
+ [ 0 18  0]
+ [ 0  0 11]]
+accuracy_Naive Bayes: 1.000
+precision_Naive Bayes: 1.000
+recall_Naive Bayes: 1.000
+f1-score_random_Forest : 1.000
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># separate target </span>
+
+<span class="c1"># values</span>
+<span class="n">X</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+
+<span class="c1"># classes</span>
+<span class="n">y</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">4</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">clf</span> <span class="o">=</span> <span class="n">GaussianNB</span><span class="p">()</span>
+<span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="n">clf_pf</span> <span class="o">=</span> <span class="n">GaussianNB</span><span class="p">()</span>
+<span class="n">clf_pf</span><span class="o">.</span><span class="n">partial_fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">y</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>GaussianNB()
+</pre></div>
+</div>
+</div>
+</div>
+<p>pengujian data uji</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># try with value [5.5, 3, 5, 2.2]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">clf_pf</span><span class="o">.</span><span class="n">predict</span><span class="p">([[</span><span class="mf">5.5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mf">2.2</span><span class="p">]]))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Virginica&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># try with value [4, 3, 5, 1.2]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">clf_pf</span><span class="o">.</span><span class="n">predict</span><span class="p">([[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mf">1.2</span><span class="p">]]))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Versicolor&#39;]
+</pre></div>
+</div>
 </div>
 </div>
 </section>
@@ -1096,17 +1008,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="naive-bayes.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="KNearestNeighbor.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><strong>NAIVE-BAYES</strong></p>
+            <p class="prev-next-title"><strong>TUGAS 3</strong></p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="decisionTree.html" title="next page">
+    <a class='right-next' id="next-link" href="k-means.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><strong>TUGAS 5</strong></p>
+        <p class="prev-next-title"><strong>TUGAS 4</strong></p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
