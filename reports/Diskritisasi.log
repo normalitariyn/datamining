@@ -17,19 +17,23 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-np.random.seed(0)
-sample_sl["kategori"] = np.where(np.random.choice(2,sample.shape[0]) < 1,"A","B")
-sample_sl
-
+# categorize every iris data
+ef_binned_df = pd.DataFrame(est_ef_binning, columns=["sepal.length", "sepal.width", "petal.length", "petal.width"])
+ef_binned_df["sepal.length"] = np.where(ef_binned_df["sepal.length"] == 0.0, "Sedikit_Lebar", np.where(ef_binned_df["sepal.length"] == 1.0, "Lebar", "Sangat_Lebar"))
+ef_binned_df["sepal.width"] = np.where(ef_binned_df["sepal.width"] == 0.0, "Sedikit_Lebar", np.where(ef_binned_df["sepal.width"] == 1.0, "Lebar", "Sangat_Lebar"))
+ef_binned_df["petal.length"] = np.where(ef_binned_df["petal.length"] == 0.0, "Sedikit_Lebar", np.where(ef_binned_df["petal.length"] == 1.0, "Lebar", "Sangat_Lebar"))
+ef_binned_df["petal.width"] = np.where(ef_binned_df["petal.width"] == 0.0, "Sedikit_Lebar", np.where(ef_binned_df["petal.width"] == 1.0, "Lebar", "Sangat_Lebar"))
 ------------------
 
 [0;31m[0m
 [0;31mNameError[0mTraceback (most recent call last)
-[0;32m<ipython-input-30-53ba9fd25ea5>[0m in [0;36m<module>[0;34m[0m
-[1;32m      1[0m [0mnp[0m[0;34m.[0m[0mrandom[0m[0;34m.[0m[0mseed[0m[0;34m([0m[0;36m0[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0;32m----> 2[0;31m [0msample_sl[0m[0;34m[[0m[0;34m"kategori"[0m[0;34m][0m [0;34m=[0m [0mnp[0m[0;34m.[0m[0mwhere[0m[0;34m([0m[0mnp[0m[0;34m.[0m[0mrandom[0m[0;34m.[0m[0mchoice[0m[0;34m([0m[0;36m2[0m[0;34m,[0m[0msample[0m[0;34m.[0m[0mshape[0m[0;34m[[0m[0;36m0[0m[0;34m][0m[0;34m)[0m [0;34m<[0m [0;36m1[0m[0;34m,[0m[0;34m"A"[0m[0;34m,[0m[0;34m"B"[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m      3[0m [0msample_sl[0m[0;34m[0m[0;34m[0m[0m
+[0;32m<ipython-input-10-9b71ea275956>[0m in [0;36m<module>[0;34m[0m
+[1;32m      1[0m [0;31m# categorize every iris data[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
+[0;32m----> 2[0;31m [0mef_binned_df[0m [0;34m=[0m [0mpd[0m[0;34m.[0m[0mDataFrame[0m[0;34m([0m[0mest_ef_binning[0m[0;34m,[0m [0mcolumns[0m[0;34m=[0m[0;34m[[0m[0;34m"sepal.length"[0m[0;34m,[0m [0;34m"sepal.width"[0m[0;34m,[0m [0;34m"petal.length"[0m[0;34m,[0m [0;34m"petal.width"[0m[0;34m][0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m      3[0m [0mef_binned_df[0m[0;34m[[0m[0;34m"sepal.length"[0m[0;34m][0m [0;34m=[0m [0mnp[0m[0;34m.[0m[0mwhere[0m[0;34m([0m[0mef_binned_df[0m[0;34m[[0m[0;34m"sepal.length"[0m[0;34m][0m [0;34m==[0m [0;36m0.0[0m[0;34m,[0m [0;34m"Sedikit_Lebar"[0m[0;34m,[0m [0mnp[0m[0;34m.[0m[0mwhere[0m[0;34m([0m[0mef_binned_df[0m[0;34m[[0m[0;34m"sepal.length"[0m[0;34m][0m [0;34m==[0m [0;36m1.0[0m[0;34m,[0m [0;34m"Lebar"[0m[0;34m,[0m [0;34m"Sangat_Lebar"[0m[0;34m)[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      4[0m [0mef_binned_df[0m[0;34m[[0m[0;34m"sepal.width"[0m[0;34m][0m [0;34m=[0m [0mnp[0m[0;34m.[0m[0mwhere[0m[0;34m([0m[0mef_binned_df[0m[0;34m[[0m[0;34m"sepal.width"[0m[0;34m][0m [0;34m==[0m [0;36m0.0[0m[0;34m,[0m [0;34m"Sedikit_Lebar"[0m[0;34m,[0m [0mnp[0m[0;34m.[0m[0mwhere[0m[0;34m([0m[0mef_binned_df[0m[0;34m[[0m[0;34m"sepal.width"[0m[0;34m][0m [0;34m==[0m [0;36m1.0[0m[0;34m,[0m [0;34m"Lebar"[0m[0;34m,[0m [0;34m"Sangat_Lebar"[0m[0;34m)[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      5[0m [0mef_binned_df[0m[0;34m[[0m[0;34m"petal.length"[0m[0;34m][0m [0;34m=[0m [0mnp[0m[0;34m.[0m[0mwhere[0m[0;34m([0m[0mef_binned_df[0m[0;34m[[0m[0;34m"petal.length"[0m[0;34m][0m [0;34m==[0m [0;36m0.0[0m[0;34m,[0m [0;34m"Sedikit_Lebar"[0m[0;34m,[0m [0mnp[0m[0;34m.[0m[0mwhere[0m[0;34m([0m[0mef_binned_df[0m[0;34m[[0m[0;34m"petal.length"[0m[0;34m][0m [0;34m==[0m [0;36m1.0[0m[0;34m,[0m [0;34m"Lebar"[0m[0;34m,[0m [0;34m"Sangat_Lebar"[0m[0;34m)[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 
-[0;31mNameError[0m: name 'sample' is not defined
-NameError: name 'sample' is not defined
+[0;31mNameError[0m: name 'est_ef_binning' is not defined
+NameError: name 'est_ef_binning' is not defined
 
