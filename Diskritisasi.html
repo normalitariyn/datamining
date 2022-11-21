@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>TUGAS 2 &#8212; Normalita Eka Ariyanti - 200411100084</title>
+    <title>Diskritisasi &#8212; Normalita Eka Ariyanti - 200411100084</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -54,8 +54,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="TUGAS 3" href="KNearestNeighbor.html" />
-    <link rel="prev" title="TUGAS 1" href="notebooks.html" />
+    <link rel="next" title="K-NN (K-NEAREST NEIGHBOR)" href="KNearestNeighbor.html" />
+    <link rel="prev" title="Statistik Deskriptif" href="notebooks.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -124,42 +124,42 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="notebooks.html">
    <strong>
-    TUGAS 1
+    Statistik Deskriptif
    </strong>
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    <strong>
-    TUGAS 2
+    Diskritisasi
    </strong>
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="KNearestNeighbor.html">
    <strong>
-    TUGAS 3
+    K-NN (K-NEAREST NEIGHBOR)
    </strong>
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="naive-bayes.html">
    <strong>
-    TUGAS 4
+    Gaussian Naive Bayes
    </strong>
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="k-means.html">
    <strong>
-    TUGAS 5
+    Clustering K-Means
    </strong>
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="decisionTree.html">
    <strong>
-    TUGAS 6
+    Decision Tree
    </strong>
   </a>
  </li>
@@ -413,7 +413,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>TUGAS 2</h1>
+                <h1>Diskritisasi</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -447,9 +447,9 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="tugas-2">
-<h1><strong>TUGAS 2</strong><a class="headerlink" href="#tugas-2" title="Permalink to this headline">#</a></h1>
-<p>Diskritisasi</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="diskritisasi">
+<h1><strong>Diskritisasi</strong><a class="headerlink" href="#diskritisasi" title="Permalink to this headline">#</a></h1>
+<p>Soal :</p>
 <ul class="simple">
 <li><p>Carilah data yang bertipe numerik ( data klassifikasi)</p></li>
 <li><p>Lakukan proses diskritisasi dengan equal width dan equal frequency</p></li>
@@ -513,7 +513,7 @@ menjadi pemecah data latih berikutnya</p>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-1de5173a-72f8-4243-a0da-c4a2a0f535bd">
+  <div id="df-daf8adf3-98a4-4fc7-8653-3ceaf8cbc72f">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -633,7 +633,7 @@ menjadi pemecah data latih berikutnya</p>
 </table>
 <p>150 rows × 5 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-1de5173a-72f8-4243-a0da-c4a2a0f535bd')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-daf8adf3-98a4-4fc7-8653-3ceaf8cbc72f')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -684,12 +684,12 @@ menjadi pemecah data latih berikutnya</p>
 
       <script>
         const buttonEl =
-          document.querySelector('#df-1de5173a-72f8-4243-a0da-c4a2a0f535bd button.colab-df-convert');
+          document.querySelector('#df-daf8adf3-98a4-4fc7-8653-3ceaf8cbc72f button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-1de5173a-72f8-4243-a0da-c4a2a0f535bd');
+          const element = document.querySelector('#df-daf8adf3-98a4-4fc7-8653-3ceaf8cbc72f');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -790,7 +790,7 @@ else sangat lebar
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-e4f2e21c-c7b4-4173-b44c-63443c43abed">
+  <div id="df-ce4c50bf-a946-4233-8a50-da0805f485d8">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -898,7 +898,7 @@ else sangat lebar
 </table>
 <p>150 rows × 4 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-e4f2e21c-c7b4-4173-b44c-63443c43abed')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-ce4c50bf-a946-4233-8a50-da0805f485d8')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -949,12 +949,12 @@ else sangat lebar
 
       <script>
         const buttonEl =
-          document.querySelector('#df-e4f2e21c-c7b4-4173-b44c-63443c43abed button.colab-df-convert');
+          document.querySelector('#df-ce4c50bf-a946-4233-8a50-da0805f485d8 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-e4f2e21c-c7b4-4173-b44c-63443c43abed');
+          const element = document.querySelector('#df-ce4c50bf-a946-4233-8a50-da0805f485d8');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -997,7 +997,7 @@ else sangat lebar
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-4c47ab9c-a93f-402b-b8af-d8204f32e48c">
+  <div id="df-621e0453-de38-44a9-9000-14686237ec7d">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1117,7 +1117,7 @@ else sangat lebar
 </table>
 <p>150 rows × 5 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-4c47ab9c-a93f-402b-b8af-d8204f32e48c')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-621e0453-de38-44a9-9000-14686237ec7d')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1168,12 +1168,12 @@ else sangat lebar
 
       <script>
         const buttonEl =
-          document.querySelector('#df-4c47ab9c-a93f-402b-b8af-d8204f32e48c button.colab-df-convert');
+          document.querySelector('#df-621e0453-de38-44a9-9000-14686237ec7d button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-4c47ab9c-a93f-402b-b8af-d8204f32e48c');
+          const element = document.querySelector('#df-621e0453-de38-44a9-9000-14686237ec7d');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -2516,13 +2516,13 @@ class_of_ef_binned_df
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><strong>TUGAS 1</strong></p>
+            <p class="prev-next-title"><strong>Statistik Deskriptif</strong></p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="KNearestNeighbor.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><strong>TUGAS 3</strong></p>
+        <p class="prev-next-title"><strong>K-NN (K-NEAREST NEIGHBOR)</strong></p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

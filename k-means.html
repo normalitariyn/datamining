@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>TUGAS 5 &#8212; Normalita Eka Ariyanti - 200411100084</title>
+    <title>Clustering K-Means &#8212; Normalita Eka Ariyanti - 200411100084</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,8 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="TUGAS 6" href="decisionTree.html" />
-    <link rel="prev" title="TUGAS 4" href="naive-bayes.html" />
+    <link rel="next" title="Decision Tree" href="decisionTree.html" />
+    <link rel="prev" title="Gaussian Naive Bayes" href="naive-bayes.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -122,42 +122,42 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="notebooks.html">
    <strong>
-    TUGAS 1
+    Statistik Deskriptif
    </strong>
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Diskritisasi.html">
    <strong>
-    TUGAS 2
+    Diskritisasi
    </strong>
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="KNearestNeighbor.html">
    <strong>
-    TUGAS 3
+    K-NN (K-NEAREST NEIGHBOR)
    </strong>
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="naive-bayes.html">
    <strong>
-    TUGAS 4
+    Gaussian Naive Bayes
    </strong>
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    <strong>
-    TUGAS 5
+    Clustering K-Means
    </strong>
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="decisionTree.html">
    <strong>
-    TUGAS 6
+    Decision Tree
    </strong>
   </a>
  </li>
@@ -418,7 +418,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>TUGAS 5</h1>
+                <h1>Clustering K-Means</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -459,9 +459,8 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="tugas-5">
-<h1><strong>TUGAS 5</strong><a class="headerlink" href="#tugas-5" title="Permalink to this headline">#</a></h1>
-<p>Clustering K-Means</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="clustering-k-means">
+<h1><strong>Clustering K-Means</strong><a class="headerlink" href="#clustering-k-means" title="Permalink to this headline">#</a></h1>
 <section id="pengertian">
 <h2><strong>Pengertian</strong><a class="headerlink" href="#pengertian" title="Permalink to this headline">#</a></h2>
 <p>Algoritma K-Means merupakan salah satu algoritma Clustering yang masuk ke dalam kelompok Unsupervised learning yang digunakan untuk mengelompokkan data ke dalam beberapa kelompok dengan sistem partisi sehingga data yang berkarakteristik sama dimasukkan ke dalam satu kelompok yang sama</p>
@@ -502,7 +501,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-93df16da-1179-4870-a256-a4732833dc1e">
+  <div id="df-dd1da47d-9237-4542-a762-214970bfca13">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -579,7 +578,7 @@ title="Print to PDF"
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-93df16da-1179-4870-a256-a4732833dc1e')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-dd1da47d-9237-4542-a762-214970bfca13')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -630,12 +629,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-93df16da-1179-4870-a256-a4732833dc1e button.colab-df-convert');
+          document.querySelector('#df-dd1da47d-9237-4542-a762-214970bfca13 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-93df16da-1179-4870-a256-a4732833dc1e');
+          const element = document.querySelector('#df-dd1da47d-9237-4542-a762-214970bfca13');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -667,7 +666,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-52272514-9cce-4588-b39b-8c8572a59eb4">
+  <div id="df-e4386b9e-8508-43a2-88fd-c8fae080cf48">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -732,7 +731,7 @@ title="Print to PDF"
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-52272514-9cce-4588-b39b-8c8572a59eb4')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-e4386b9e-8508-43a2-88fd-c8fae080cf48')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -783,12 +782,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-52272514-9cce-4588-b39b-8c8572a59eb4 button.colab-df-convert');
+          document.querySelector('#df-e4386b9e-8508-43a2-88fd-c8fae080cf48 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-52272514-9cce-4588-b39b-8c8572a59eb4');
+          const element = document.querySelector('#df-e4386b9e-8508-43a2-88fd-c8fae080cf48');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1065,7 +1064,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f4db573cbd0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7ff41fffa510&gt;
 </pre></div>
 </div>
 <img alt="_images/k-means_22_1.png" src="_images/k-means_22_1.png" />
@@ -1121,13 +1120,13 @@ title="Print to PDF"
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><strong>TUGAS 4</strong></p>
+            <p class="prev-next-title"><strong>Gaussian Naive Bayes</strong></p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="decisionTree.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><strong>TUGAS 6</strong></p>
+        <p class="prev-next-title"><strong>Decision Tree</strong></p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
